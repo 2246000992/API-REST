@@ -1,10 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const EjerciciosController = require('../controllers/Ejercicios');
 
-router.get('/ejercicios', (req, res) => {
-    res.json({
-        message: 'Hola mundo'
-    });
-});
+router.get('/ejercicios', EjerciciosController.BuscarTodo)
 
 module.exports = router;
